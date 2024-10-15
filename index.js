@@ -22,3 +22,5 @@ const obj2 = { 3: "a", 4: "9" }
 const obj3 =Object.assign({} ,obj1,obj2)
 const obj4= {...obj1,...obj2} //sprade object
 console.log(obj3);
+
+
