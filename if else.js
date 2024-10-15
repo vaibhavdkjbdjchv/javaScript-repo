@@ -8,12 +8,6 @@ const user1 = {
     a: 0
 
 }
-
-
-
-
-
-
 if (Object.keys(user1).length === 0) {
     console.log("this object is empty");
 }
@@ -30,4 +24,10 @@ val2 = 5 ?? 6;
 
 console.log(`two values ${val2}`);
 console.log(`value with null ${val1}`);
+
+
+
+console.log("this is try");
+console.log("tp");
+console.log("tp");
 
