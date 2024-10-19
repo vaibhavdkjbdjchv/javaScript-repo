@@ -24,7 +24,7 @@
 
         <div class="resultParas">
             <p>Previous Guesses : <span class="guesses"></span></p>
-            <p>Previous Remaining : <span class="lastResult">9</span></p>
+            <p>Previous Remaining : <span class="lastResult">10</span></p>
             <p class="lowOrHi"></p>
         </div>
     </div>
@@ -54,7 +54,7 @@
     }
 
     function validateGuess(guess) {
-        if (guess === "") {
+        if (guess === '') {
             alert("Enter a Numebr")
         }
         else if (guess < 1) {
@@ -84,7 +84,6 @@
         if (guess === randomNumber) {
             displayMeassage("U gaessed Right");
             endGame();
-
         }
         // else if (guess < randomNumber) {
         //     displayGess("Number is low")
