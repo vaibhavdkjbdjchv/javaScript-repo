@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            width: 100px;
+            height: 100px;
+            /* background-color: aqua; */
+            padding: 10px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Color changes using JS</h1>
+    <span class="button" id="grey" style="background-color: gray; color: aliceblue;">grey</span>
+    <span class="button" id="yellow" style="background-color: yellow;color: rgb(0, 0, 0);">Yellow</span>
+    <span class="button" id="red" style="background-color: rgb(255, 0, 0);color: white;">Red</span>
+    <span class="button" id="pink" style="background-color: pink;color: rgb(0, 0, 0);">Pink</span>
+</body>
+<script>
+    const body = document.querySelector("body");
+    const button = document.querySelectorAll(".button");
+    button.forEach(function (button) {
+        console.log(button);
+        button.addEventListener('click', function (e) {
+            console.log(e);
+            console.log(e.target);
+            if (e.target.id == "grey") {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id == "yellow") {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id == "red") {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id == "pink") {
+                body.style.backgroundColor = e.target.id;
+            }
+        })
+    })
+</script>
+
+</html>
