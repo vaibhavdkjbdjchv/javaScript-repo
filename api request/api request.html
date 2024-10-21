@@ -1,0 +1,55 @@
+<!-- comumnicatin betweeen two  system   -->
+<!-- comunaction between java to php  -->
+<!-- using frotend from another system or backend from another system  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .imgs {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    The read-only XMLHttpRequest.statusText property returns a string containing the response's status message as
+    returned by the HTTP server. Unlike XMLHTTPRequest.status which indicates a numerical status code, this property
+    contains the text of the response status, such as "OK" or "Not Found". If the request's readyState is in UNSENT or
+    OPENED state, the value of statusText will be an empty string.
+    <div class="imgs">
+        <!-- <img src='${data.avatar_url}' style="width: 200px;height: 200px ;" alt=""> -->
+    </div>
+</body>
+<script>
+    const requestUrl = ' https://api.github.com/users/hiteshchoudhary'; const xhr = new XMLHttpRequest(); xhr.open('GET',
+        requestUrl); xhr.onreadystatechange = function () {
+            console.log(xhr.readyState); if (xhr.readyState === 4) {
+                const data = JSON.parse(this.responseText);
+                 console.log(data.name); console.log(data.avatar_url);
+                constp = document.createElement('img'); 
+                const images = document.querySelector('.imgs'); 
+                p.innerHTML = `<img src=${data.avatar_url} style="width: 200px;height: 200px ; alt="">`
+                console.log(p);
+                images.appendChild(p)
+
+
+
+            }
+        }
+
+    xhr.send()
+
+</script>
+
+</html>

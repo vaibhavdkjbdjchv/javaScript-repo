@@ -52,19 +52,18 @@
         }
         return color;
     }
+    let intervelColor
     console.log(randomColor());
-
     const body = document.querySelector("body");
     const startColorChange = function () {
-        setInterval(bgColorChange, 5000)
+        intervelColor = setInterval(bgColorChange, 1000)
         function bgColorChange() {
             body.style.backgroundColor = randomColor();
         }
 
     }
-    setInterval(startColorChange, 1000)
     const stopColorChange = function () {
-
+        clearInterval(intervelColor)
     }
     document.querySelector(".start").addEventListener('click', function () {
         startColorChange();
